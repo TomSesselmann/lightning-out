@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Salesforce Lightnig Out Demo 
+    </title>
+  </head>
+  <body>
+
+	<div id="lexcontainer"> 
+    Hello World
+	</div>
+  
+         
+  </body>
+  <script src="https://ampfs--poccontac2.lightning.force.com/lightning/lightning.out.js"></script>
+  <!-- <script src="https://poccontac2-ampfs--poccontac2.cs116.force.com/s/lightning/lightning.out.js"></script> -->
+  <script> 
+    //do not redirect for localhost
+    if (window.location.protocol != "https:" && window.location.hostname != 'localhost'){
+      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    }
+
+    $Lightning.use("c:KnowledgeOut", function() {
+      $Lightning.createComponent("c:KnowledgeOutC", {}, "lexcontainer"); 
+    }, "https://poccontac2-ampfs--poccontac2.cs116.force.com");
+
+  </script>
+</html>
