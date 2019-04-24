@@ -1,5 +1,5 @@
 {
-  "name": "Salesfore_Lightnign_Out_Demo",
+  "name": "Salesfore_Lightning_Out_Demo",
   "version": "0.0.1",
   "description": "Surface Lightning Component on Node.js Application",
   "main": "Server.js",
@@ -12,12 +12,12 @@
   },
   "keywords": [
     "Node.Js",
-    "Lightnig Component",
-    "Lightnig Out",
+    "Lightning Component",
+    "Lightning Out",
     "API",
     "Salesforce"
   ],
-  "author": "Jitendra Zaa",
+  "author": "Thomas Sesselmann",
   "license": "MIT",
   "dependencies": {
     "body-parser": "~1.6.2",
@@ -28,6 +28,6 @@
     "request": "^2.88.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "11.1.x"
   }
 }
