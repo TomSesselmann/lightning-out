@@ -45,6 +45,14 @@ app.get('/' ,  function(req,res,next) {
 app.get('/index*' ,  function(req,res,next) {
     res.sendFile('views/index.html', { root: __dirname });
 } );  
+
+app.get('/knowledge*' ,  function(req,res,next) {
+    res.sendFile('views/knowledge.html', { root: __dirname });
+} );  
+
+app.get('/flow*' ,  function(req,res,next) {
+    res.sendFile('views/flow.html', { root: __dirname });
+} );  
  
 
 // app.listen(app.get('port'), function () {

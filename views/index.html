@@ -2,27 +2,22 @@
 <html lang="en">
   <head>
     <title>
-      Salesforce Lightnig Out Demo 
+      Salesforce Lightning Out Demo 
     </title>
   </head>
   <body>
+    <h1>Tom's Salesforce Lightning Out Demos</h1>
 
-	<div id="lexcontainer">
-	</div>
-  
+    <div>
+      <ul>
+        <li>
+          <a href="knowledge.html">Knowledge Lightning Out Demo</a>
+        </li>
+        <li>
+          <a href="flow.html">Flow Lightning Out Demo</a>
+        </li>
+      </ul>
+    </div>
          
   </body>
-  <script src="https://ampfs--poccontac2.lightning.force.com/lightning/lightning.out.js"></script>
-  <!-- <script src="https://poccontac2-ampfs--poccontac2.cs116.force.com/s/lightning/lightning.out.js"></script> -->
-  <script> 
-    //do not redirect for localhost
-    if (window.location.protocol != "https:" && window.location.hostname != 'localhost'){
-      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-    }
-
-    $Lightning.use("c:KnowledgeOut", function() {
-      $Lightning.createComponent("c:KnowledgeOutC", {}, "lexcontainer"); 
-    }, "https://poccontac2-ampfs--poccontac2.cs116.force.com");
-
-  </script>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Salesforce Knowledge Lightning Out Demo 
+    </title>
+  </head>
+  <body>
+
+	<div id="lexcontainer">
+	</div>
+  
+  </body>
+  <script src="https://ampfs--poccontac2.lightning.force.com/lightning/lightning.out.js"></script>
+  <!-- <script src="https://poccontac2-ampfs--poccontac2.cs116.force.com/s/lightning/lightning.out.js"></script> -->
+  <script> 
+
+    $Lightning.use("c:KnowledgeOut", function() {
+      $Lightning.createComponent("c:KnowledgeOutC", {}, "lexcontainer"); 
+    }, "https://poccontac2-ampfs--poccontac2.cs116.force.com");
+
+  </script>
+</html>
