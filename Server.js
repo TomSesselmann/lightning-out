@@ -53,6 +53,10 @@ app.get('/knowledge*' ,  function(req,res,next) {
 app.get('/flow*' ,  function(req,res,next) {
     res.sendFile('views/flow.html', { root: __dirname });
 } );  
+
+app.get('/chat*' ,  function(req,res,next) {
+    res.sendFile('views/chat.html', { root: __dirname });
+} );  
  
 
 // app.listen(app.get('port'), function () {
