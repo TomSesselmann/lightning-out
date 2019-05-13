@@ -10,7 +10,7 @@ var fs = require('fs');
 	
 var logFmt = require("logfmt");
 
-app.use(express.static(__dirname + '/client')); 
+app.use(express.static(__dirname + '/public')); 
 
 app.use(bodyParser.json());  
 
@@ -57,6 +57,11 @@ app.get('/flow*' ,  function(req,res,next) {
 app.get('/chat*' ,  function(req,res,next) {
     res.sendFile('views/chat.html', { root: __dirname });
 } );  
+
+app.get('/combined*' ,  function(req,res,next) {
+    res.sendFile('views/combined.html', { root: __dirname });
+} );  
+
  
 
 // app.listen(app.get('port'), function () {
