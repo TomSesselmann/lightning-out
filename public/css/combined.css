@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+.slds-scope a {
+    color: #00aadf;
+}
+
 .main-container {
     display: flex;
     min-height: 100vh;

@@ -62,6 +62,10 @@ app.get('/combined*' ,  function(req,res,next) {
     res.sendFile('views/combined.html', { root: __dirname });
 } );  
 
+app.get('/article*' ,  function(req,res,next) {
+    res.sendFile('views/article.html', { root: __dirname });
+} );  
+
  
 
 // app.listen(app.get('port'), function () {
