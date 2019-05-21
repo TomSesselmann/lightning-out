@@ -62,13 +62,44 @@ app.get('/article/:articleId' ,  function(req,res,next) {
     res.sendFile('views/article.html', { root: __dirname });
 } );  
 
-app.get('/form/:formId' ,  function(req,res,next) {
-    var formId = req.params.formId;
-    switch(formId) {
+app.get('/doc/:docId' ,  function(req,res,next) {
+    var docId = req.params.docId;
+    switch(docId) {
         case '001': res.sendFile('docs/form1.jpg', { root: __dirname }); break;
         case '002': res.sendFile('docs/form2.pdf', { root: __dirname }); break;
         case '003': res.sendFile('docs/form3.png', { root: __dirname }); break;
     }
+} );  
+
+app.get('/doc-list' ,  function(req,res,next) {
+    res.send({
+        docs: [
+            {
+                Title: "form1.jpg",
+                ContentDocumentId: "001",
+                Document_Type__c: "Form",
+                FileType: "JPG",
+                CreatedByName: "Thomas Sesselmann",
+                CreatedDate: "2019-05-20T01:20:49.000Z",
+            },
+            {
+                Title: "form2.pdf",
+                ContentDocumentId: "002",
+                Document_Type__c: "Form",
+                FileType: "PDF",
+                CreatedByName: "Thomas Sesselmann",
+                CreatedDate: "2019-05-20T01:21:49.000Z",
+            },
+            {
+                Title: "form3.png",
+                ContentDocumentId: "003",
+                Document_Type__c: "Form",
+                FileType: "PNG",
+                CreatedByName: "Thomas Sesselmann",
+                CreatedDate: "2019-05-20T01:22:49.000Z",
+            }
+        ]
+    })
 } );  
 
  
