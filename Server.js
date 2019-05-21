@@ -40,30 +40,35 @@ app.all('/proxy',  function(req, res, next) {
  
 app.get('/' ,  function(req,res,next) {
     res.sendFile('views/index.html', { root: __dirname });
-} ); 
+} );
 
-app.get('/index*' ,  function(req,res,next) {
-    res.sendFile('views/index.html', { root: __dirname });
-} );  
-
-app.get('/knowledge*' ,  function(req,res,next) {
+app.get('/knowledge' ,  function(req,res,next) {
     res.sendFile('views/knowledge.html', { root: __dirname });
 } );  
 
-app.get('/flow*' ,  function(req,res,next) {
+app.get('/flow' ,  function(req,res,next) {
     res.sendFile('views/flow.html', { root: __dirname });
 } );  
 
-app.get('/chat*' ,  function(req,res,next) {
+app.get('/chat' ,  function(req,res,next) {
     res.sendFile('views/chat.html', { root: __dirname });
 } );  
 
-app.get('/combined*' ,  function(req,res,next) {
+app.get('/combined' ,  function(req,res,next) {
     res.sendFile('views/combined.html', { root: __dirname });
 } );  
 
-app.get('/article*' ,  function(req,res,next) {
+app.get('/article/:articleId' ,  function(req,res,next) {
     res.sendFile('views/article.html', { root: __dirname });
+} );  
+
+app.get('/form/:formId' ,  function(req,res,next) {
+    var formId = req.params.formId;
+    switch(formId) {
+        case '001': res.sendFile('docs/form1.jpg', { root: __dirname }); break;
+        case '002': res.sendFile('docs/form2.pdf', { root: __dirname }); break;
+        case '003': res.sendFile('docs/form3.png', { root: __dirname }); break;
+    }
 } );  
 
  

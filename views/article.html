@@ -30,7 +30,8 @@
   <script> 
 
     $Lightning.use("c:ArticleOut", function() {
-      $Lightning.createComponent("c:ArticleOutC", {}, "lexcontainer"); 
+      var recordId = window.location.href.split("/").pop();
+      $Lightning.createComponent("c:ArticleOutC", { "recordId": recordId }, "lexcontainer"); 
     }, "https://poccontac2-ampfs--poccontac2.cs116.force.com/k");
 
   </script>
