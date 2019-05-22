@@ -82,6 +82,7 @@ app.get('/doc-list' ,  function(req,res,next) {
                 CreatedByName: "Thomas Sesselmann",
                 CreatedDate: "2019-05-20T01:20:49.000Z",
                 Id: "ARCHIVED",
+                OnDemand: true,
             },
             {
                 Title: "form2.pdf",
@@ -91,6 +92,7 @@ app.get('/doc-list' ,  function(req,res,next) {
                 CreatedByName: "Thomas Sesselmann",
                 CreatedDate: "2019-05-20T01:21:49.000Z",
                 Id: "ARCHIVED",
+                OnDemand: true,
             },
             {
                 Title: "form3.png",
@@ -100,6 +102,7 @@ app.get('/doc-list' ,  function(req,res,next) {
                 CreatedByName: "Thomas Sesselmann",
                 CreatedDate: "2019-05-20T01:22:49.000Z",
                 Id: "ARCHIVED",
+                OnDemand: true,
             }
         ]
     })
