@@ -68,6 +68,7 @@ app.get('/doc/:docId' ,  function(req,res,next) {
         case '001': res.sendFile('docs/form1.jpg', { root: __dirname }); break;
         case '002': res.sendFile('docs/form2.pdf', { root: __dirname }); break;
         case '003': res.sendFile('docs/form3.png', { root: __dirname }); break;
+        case '004': res.sendFile('docs/form4.png', { root: __dirname }); break;
     }
 } );  
 
@@ -101,6 +102,16 @@ app.get('/doc-list' ,  function(req,res,next) {
                 FileType: "PNG",
                 CreatedByName: "Thomas Sesselmann",
                 CreatedDate: "2019-05-20T01:22:49.000Z",
+                Id: "ARCHIVED",
+                OnDemand: true,
+            },
+            {
+                Title: "form4.png",
+                ContentDocumentId: "004",
+                Document_Type__c: "Form",
+                FileType: "TIF",
+                CreatedByName: "Thomas Sesselmann",
+                CreatedDate: "2019-05-20T01:23:49.000Z",
                 Id: "ARCHIVED",
                 OnDemand: true,
             }
