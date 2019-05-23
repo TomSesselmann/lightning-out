@@ -68,7 +68,7 @@ app.get('/doc/:docId' ,  function(req,res,next) {
         case '001': res.sendFile('docs/form1.jpg', { root: __dirname }); break;
         case '002': res.sendFile('docs/form2.pdf', { root: __dirname }); break;
         case '003': res.sendFile('docs/form3.png', { root: __dirname }); break;
-        case '004': res.sendFile('docs/form4.png', { root: __dirname }); break;
+        case '004': res.sendFile('docs/form4.tif', { root: __dirname }); break;
     }
 } );  
 
