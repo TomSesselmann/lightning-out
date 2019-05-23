@@ -106,7 +106,7 @@ app.get('/doc-list' ,  function(req,res,next) {
                 OnDemand: true,
             },
             {
-                Title: "form4.png",
+                Title: "form4.tif",
                 ContentDocumentId: "004",
                 Document_Type__c: "Form",
                 FileType: "TIF",
