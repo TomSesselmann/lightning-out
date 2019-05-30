@@ -129,8 +129,8 @@ app.listen(process.env.PORT || 3000, function(){
 });
 
 var options = {
-    key: fs.readFileSync('./key.pem', 'utf8'),
-    cert: fs.readFileSync('./server.crt', 'utf8')
+    key: process.env.KEY_PEM,
+    cert: process.env.SERVER_CRT
 };
 
 https.createServer(options, app).listen(8081);
